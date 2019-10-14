@@ -1,0 +1,29 @@
+{
+  "name": "massager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/client/index.js",
+  "scripts": {
+    "build": "webpack -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel": "5.x",
+    "babel-loader": "5.*",
+    "cors": "^2.8.5",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "json-loader": "^0.5.7",
+    "react-hot-loader": "^1.3.1",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.4.1"
+  }
+}
