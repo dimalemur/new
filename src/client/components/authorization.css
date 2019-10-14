@@ -1,17 +1,99 @@
 .Authorization{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(59, 102, 107, 0.56);
+    border-radius: 30px;
+}
+
+.Authorization-Registration {
+    margin: 20px auto 0;
+    font-size: 1.2em;
+}
+
+.Authorization-Login{
+    margin: 0 auto;
+    font-size: 1.2em;
 }
 
 .Authorization-Inner{
-
+    width:300px;
+    display: grid;
 
 }
 
 .Authorization-Username{
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.Authorization-Username:focus{
 }
 
 .Authorization-Password{
-
+    height: 40px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.Authorization-Button {
+.Button {
+    display: block;
+    height: 40px;
+    width: 200px;
+    cursor: pointer;
+    outline: none;
+    background: rgba(61, 163, 90, 0.61);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(56,100,38);
+}
+
+.Button:active{
+    transform:scale(0.95);
+}
+
+@media (max-width: 500px) {
+    .Authorization{
+        width:100vw;
+        background: none;
+    }
+    .Authorization-Inner{
+        width: 70%;
+
+    }
+    .Button{
+        display: block;
+        max-width: 70%;
+    }
+    .Authorization-Password{
+        width: 100%;
+        padding: 0 0 0 2px;
+    }
+    .Authorization-Username{
+        width: 100%;
+        padding: 0 0 0 2px;
+    }
+}
+
+@media (max-width: 300px) {
+    .Authorization-Inner{
+        width: 100%;
+    }
+    .Button{
+        display: block;
+        font-size: 100%;
+        width: 70%;
+    }
 }

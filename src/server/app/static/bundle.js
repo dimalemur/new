@@ -32750,6 +32750,8 @@
 	
 	var _componentsAuthorization = __webpack_require__(19);
 	
+	__webpack_require__(26);
+	
 	var Registration = (function (_React$Component) {
 	    _inherits(Registration, _React$Component);
 	
@@ -32843,6 +32845,11 @@
 	            this.setState({ password: event.target.value });
 	        }
 	    }, {
+	        key: 'getRegistered',
+	        value: function getRegistered(event) {
+	            event.preventDefault();
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2['default'].createElement(
@@ -32851,12 +32858,17 @@
 	                _react2['default'].createElement(
 	                    'form',
 	                    { action: '/login', method: 'POST', className: 'Authorization-Inner', onSubmit: this.submitForm },
-	                    _react2['default'].createElement('input', { name: 'user', className: 'Authorization-Username', value: this.state.user, onChange: this.changeUser }),
-	                    _react2['default'].createElement('input', { name: 'password', className: 'Authorization-Password', value: this.state.password, onChange: this.changePassword }),
+	                    _react2['default'].createElement('input', { placeholder: 'Username', name: 'user', className: 'Authorization-Username', value: this.state.user, onChange: this.changeUser }),
+	                    _react2['default'].createElement('input', { placeholder: 'Password', name: 'password', className: 'Authorization-Password', value: this.state.password, onChange: this.changePassword }),
 	                    _react2['default'].createElement(
 	                        'button',
-	                        { className: 'Authorization-Button', type: 'submit' },
+	                        { className: 'Authorization-Login Button', type: 'submit' },
 	                        'Войти'
+	                    ),
+	                    _react2['default'].createElement(
+	                        'button',
+	                        { onClick: this.getRegistered, className: 'Authorization-Registration Button' },
+	                        'Регистрация'
 	                    )
 	                )
 	            );
@@ -32896,7 +32908,7 @@
 
 	exports = module.exports = __webpack_require__(22)(false);
 	// Module
-	exports.push([module.id, ".Authorization{\r\n    width:\r\n}\r\n\r\n.Authorization-Inner{\r\n\r\n\r\n}\r\n\r\n.Authorization-Username{\r\n}\r\n\r\n.Authorization-Password{\r\n\r\n}\r\n\r\n.Authorization-Button {\r\n}", ""]);
+	exports.push([module.id, ".Authorization{\n    width: 500px;\n    height: 500px;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-pack: center;\n        justify-content: center;\n    -ms-flex-align: center;\n        align-items: center;\n    background: rgba(59, 102, 107, 0.56);\n    border-radius: 30px;\n}\n\n.Authorization-Registration {\n    margin: 20px auto 0;\n    font-size: 1.2em;\n}\n\n.Authorization-Login{\n    margin: 0 auto;\n    font-size: 1.2em;\n}\n\n.Authorization-Inner{\n    width:300px;\n    display: -ms-grid;\n    display: grid;\n\n}\n\n.Authorization-Username{\n    height: 40px;\n    margin-bottom: 20px;\n    border: none;\n    outline: none;\n    padding: 5px;\n    border-radius: 10px;\n\n}\n\n.Authorization-Username:focus{\n}\n\n.Authorization-Password{\n    height: 40px;\n    margin-bottom: 20px;\n    border: none;\n    outline: none;\n    padding: 5px;\n    border-radius: 10px;\n}\n\n.Button {\n    display: block;\n    height: 40px;\n    width: 200px;\n    cursor: pointer;\n    outline: none;\n    background: rgba(61, 163, 90, 0.61);\n    border: none;\n    color: #ffffff;\n    font-weight: 600;\n    border-radius: 5px;\n    box-shadow: 0 0 10px rgb(56,100,38);\n}\n\n.Button:active{\n    transform:scale(0.95);\n}\n\n@media (max-width: 500px) {\n    .Authorization{\n        width:100vw;\n        background: none;\n    }\n    .Authorization-Inner{\n        width: 70%;\n\n    }\n    .Button{\n        display: block;\n        max-width: 70%;\n    }\n    .Authorization-Password{\n        width: 100%;\n        padding: 0 0 0 2px;\n    }\n    .Authorization-Username{\n        width: 100%;\n        padding: 0 0 0 2px;\n    }\n}\n\n@media (max-width: 300px) {\n    .Authorization-Inner{\n        width: 100%;\n    }\n    .Button{\n        display: block;\n        font-size: 100%;\n        width: 70%;\n    }\n}", ""]);
 
 
 /***/ }),
@@ -33309,7 +33321,38 @@
 
 	exports = module.exports = __webpack_require__(22)(false);
 	// Module
-	exports.push([module.id, "body {\r\n    margin: 0;\r\n}\r\n#Page {\r\n    height: 100vh;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-align: center;\r\n        align-items: center;\r\n    -ms-flex-pack: center;\r\n        justify-content: center;\r\n}", ""]);
+	exports.push([module.id, "body {\n    margin: 0;\n    background-image: url(https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png);\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n}", ""]);
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var content = __webpack_require__(27);
+	
+	if (typeof content === 'string') {
+	  content = [[module.id, content, '']];
+	}
+	
+	var options = {}
+	
+	options.insert = "head";
+	options.singleton = false;
+	
+	var update = __webpack_require__(23)(content, options);
+	
+	if (content.locals) {
+	  module.exports = content.locals;
+	}
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(22)(false);
+	// Module
+	exports.push([module.id, ".Registration {\n    min-height: 100vh;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-align: center;\n        align-items: center;\n    -ms-flex-pack: center;\n        justify-content: center;\n}", ""]);
 
 
 /***/ })

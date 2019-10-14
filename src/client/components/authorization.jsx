@@ -38,13 +38,18 @@ export class Authorization extends React.Component{
         this.setState({password:event.target.value})
     }
 
+    getRegistered(event){
+        event.preventDefault();
+    }
+
     render() {
         return (
             <div className="Authorization">
                     <form  action= "/login" method="POST" className="Authorization-Inner" onSubmit={this.submitForm}>
-                        <input name="user" className= "Authorization-Username" value= {this.state.user} onChange={this.changeUser}/>
-                        <input name="password" className= "Authorization-Password" value= {this.state.password} onChange={this.changePassword}/>
-                        <button className="Authorization-Button" type="submit">Войти</button>
+                        <input placeholder="Username" name="user" className= "Authorization-Username" value= {this.state.user} onChange={this.changeUser}/>
+                        <input placeholder="Password" name="password" className= "Authorization-Password" value= {this.state.password} onChange={this.changePassword}/>
+                        <button className="Authorization-Login Button" type="submit">Войти</button>
+                        <button onClick={this.getRegistered} className="Authorization-Registration Button">Регистрация</button>
                     </form>
             </div>
         )
